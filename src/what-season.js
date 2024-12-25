@@ -16,6 +16,9 @@ function getSeason(date) {
   if (!date) {
     return 'Unable to determine the time of year!';
   }
+  if (!(date instanceof Date)) {
+    throw Error('Invalid date!');
+  }
   const month = date.getMonth();
   switch(month) {
     case 2:
