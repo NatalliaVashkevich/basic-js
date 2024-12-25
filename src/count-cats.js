@@ -18,12 +18,10 @@ function countCats(matrix) {
   let catsCounter = 0;
   for (let i in matrix) {
     for (let j in matrix[i]) {
-      if (matrix[i][j] === '^^') {
-        catsCounter += 1;
+      matrix[i][j] === '^^' ? catsCounter += 1 : catsCounter;
       }
     }
-  }
-  return catsCounter;
+    return catsCounter;
 }
 
 module.exports = {
