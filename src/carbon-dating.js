@@ -21,7 +21,7 @@ function dateSample(sampleActivity) {
   if(typeof sampleActivity !== 'string') {
     return false;
   }
-  const value = parseFloat(sampleActivity);
+  const value = +sampleActivity;
   if( !value || value <= 0 || value > MODERN_ACTIVITY || isNaN(value) ) {
     return false;
   }
