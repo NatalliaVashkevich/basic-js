@@ -19,7 +19,7 @@ function getSeason(date) {
   if (!(date instanceof Date) || isNaN(date)) {
     throw new Error('Invalid date!');
   }
- 
+
   const month = date.getMonth();
   switch(month) {
     case 2:
@@ -40,7 +40,9 @@ function getSeason(date) {
     default:
       season = 'winter';
   }
+  
   return season;
+
 }
 
 module.exports = {
